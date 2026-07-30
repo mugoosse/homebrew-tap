@@ -5,7 +5,7 @@ cask "speak" do
   # Homebrew to install whatever bytes arrive at that URL. Rewritten on every
   # release by the homebrew-tap workflow in mugoosse/speak, which reads the
   # hash from the published DMG.
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "31b7a19252e4e00d32085dcd2976856d1fefe6f2f32289304b0f0ac644cd0384"
 
   url "https://github.com/mugoosse/speak/releases/download/v#{version}/Speak-#{version}.dmg"
   name "Speak"
