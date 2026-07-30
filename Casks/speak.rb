@@ -12,7 +12,7 @@ cask "speak" do
   desc "Push-to-talk dictation that runs entirely on your Mac"
   homepage "https://github.com/mugoosse/speak"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   # Speak updates itself through Sparkle, and Homebrew has to be told, or the
