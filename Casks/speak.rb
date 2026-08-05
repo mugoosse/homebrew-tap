@@ -8,10 +8,15 @@ cask "speak" do
   # it. They are the same bytes, but only the versioned URL is immutable, and
   # pinning a hash to a moving URL is worse than not pinning one at all.
   #
-  # Bumped by hand on each release, from the hash release.sh writes into
-  # dist/SHA256SUMS.txt. homebrew-tap.yml in mugoosse/speak automates the same
-  # two lines as a pull request, but it needs a HOMEBREW_TAP_TOKEN secret that
-  # is not set, so it fails on its first step.
+  # Bumped from the hash release.sh writes into dist/SHA256SUMS.txt, normally
+  # by homebrew-tap.yml in mugoosse/speak, which rewrites these two lines and
+  # opens a pull request against this file.
+  #
+  # It edits with sed rather than regenerating the cask, and that is the part
+  # worth keeping: the caveats and the zap stanza below are hand-written, and
+  # nothing in a release implies either of them, so a generator would quietly
+  # flatten both. Bumping by hand is the fallback when a run fails, and then
+  # these are still the only two lines that change.
   sha256 "db632967df39ab4b8c817fdbad867b71b9440ef80f421ac6fc918231a9f6f2c6"
 
   url "https://github.com/mugoosse/speak/releases/download/v#{version}/Speak-#{version}.dmg"
