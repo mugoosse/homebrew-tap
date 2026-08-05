@@ -1,5 +1,5 @@
 cask "listen" do
-  version "0.1.0"
+  version "0.1.1"
   # Pinned, not :no_check. The download URL carries the version, so the file it
   # points at is immutable and its hash is knowable. :no_check would tell
   # Homebrew to install whatever bytes arrive at that URL.
@@ -12,7 +12,7 @@ cask "listen" do
   # homebrew-tap.yml in mugoosse/listen automates the same two lines as a pull
   # request, but it needs a HOMEBREW_TAP_TOKEN secret that is not set, so it
   # fails on its first step. Same as speak.
-  sha256 "f9f7cbfdddb504aa98960b48f9b215b4a18bed7b599dadbf5f3d033d7d4f20db"
+  sha256 "8b4544db4342a5fbc71c9f83fee3e15aa4e6043526f8ca9d4ab0033c4d479031"
 
   url "https://github.com/mugoosse/listen/releases/download/v#{version}/Listen-#{version}.dmg"
   name "Listen"
