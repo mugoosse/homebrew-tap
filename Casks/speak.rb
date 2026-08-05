@@ -1,5 +1,5 @@
 cask "speak" do
-  version "1.1.4"
+  version "1.2.0"
   # Pinned, not :no_check. The download URL carries the version, so the file it
   # points at is immutable and its hash is knowable. :no_check would tell
   # Homebrew to install whatever bytes arrive at that URL.
@@ -12,7 +12,7 @@ cask "speak" do
   # dist/SHA256SUMS.txt. homebrew-tap.yml in mugoosse/speak automates the same
   # two lines as a pull request, but it needs a HOMEBREW_TAP_TOKEN secret that
   # is not set, so it fails on its first step.
-  sha256 "b83ae9ae9926809019584b185da7798f708976d3c7c69f7cda373c2bd8a87d5f"
+  sha256 "f8bd259869b363155b816d13ee4a102e2b62a089ecfd9cbc7a9e3f434826f400"
 
   url "https://github.com/mugoosse/speak/releases/download/v#{version}/Speak-#{version}.dmg"
   name "Speak"
