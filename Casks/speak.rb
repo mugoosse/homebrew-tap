@@ -1,5 +1,5 @@
 cask "speak" do
-  version "1.3.1"
+  version "1.5.0"
   # Pinned, not :no_check. The download URL carries the version, so the file it
   # points at is immutable and its hash is knowable. :no_check would tell
   # Homebrew to install whatever bytes arrive at that URL.
@@ -17,7 +17,7 @@ cask "speak" do
   # nothing in a release implies either of them, so a generator would quietly
   # flatten both. Bumping by hand is the fallback when a run fails, and then
   # these are still the only two lines that change.
-  sha256 "865a2cc17f695ff2cacafddeaff5bfc09f5a42f1902d9203bce147f6d2c25346"
+  sha256 "d41370492a3e0babd04ca7d5af28074901c3987efab45a3fd74ef9be74eef101"
 
   url "https://github.com/mugoosse/speak/releases/download/v#{version}/Speak-#{version}.dmg"
   name "Speak"
