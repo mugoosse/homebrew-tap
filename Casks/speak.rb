@@ -24,8 +24,19 @@ cask "speak" do
   desc "Push-to-talk dictation that runs entirely on your Mac"
   homepage "https://github.com/mugoosse/speak"
 
-  depends_on macos: :sonoma
-  depends_on arch: :arm64
+  # Dictation moved into Listen, and Speak 1.6.0 is its last release.
+  #
+  # `deprecate!` rather than `disable!`, deliberately: a deprecated cask still
+  # installs and still upgrades, it only prints the reason, so nobody who
+  # already runs Speak is cut off by a decision made in another repository. The
+  # date is when the farewell release went out, in the past so it takes effect
+  # immediately rather than on some future run nobody is watching.
+  #
+  # `disable!` is the later step, once the repository is archived and the
+  # download links are the only thing left. It refuses to install, which is only
+  # honest when there is nothing worth installing.
+  deprecate! date:    "2026-08-10",
+             because: "dictation is now built into Listen: brew install --cask mugoosse/tap/listen"
 
   # Speak updates itself through Sparkle, and Homebrew has to be told, or the
   # two fight over who owns the version: Sparkle replaces the app in place,
@@ -37,6 +48,8 @@ cask "speak" do
   # bundle rather than only its own metadata, so a copy Sparkle already brought
   # up to date is correctly left alone.
   auto_updates true
+  depends_on macos: :sonoma
+  depends_on arch: :arm64
 
   app "Speak.app"
 
@@ -51,6 +64,13 @@ cask "speak" do
   ]
 
   caveats <<~EOS
+    Speak has moved into Listen, which records and transcribes meetings and
+    now does everything Speak does:
+
+      brew install --cask mugoosse/tap/listen
+
+    The speech model carries over on its own. Speak 1.6.0 is the last release.
+
     Speak needs two permissions on first launch:
 
       Microphone     so it can hear you
