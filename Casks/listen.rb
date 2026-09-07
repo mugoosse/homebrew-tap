@@ -17,7 +17,7 @@ cask "listen" do
   # nothing in a release implies either of them, so a generator would quietly
   # flatten both. Bumping by hand is the fallback when a run fails, and then
   # these are still the only two lines that change.
-  sha256 "c75803654d826b0ecf4b06e7216ba0242fcfeb756412e7ecf781a0ebf37b981f"
+  sha256 "d2b3c2611814a06b1d5698c0b60a5150a21633e42025e23b536a3d63bd082481"
 
   url "https://github.com/mugoosse/listen/releases/download/v#{version}/Listen-#{version}.dmg"
   name "Listen"
