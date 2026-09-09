@@ -1,5 +1,5 @@
 cask "listen" do
-  version "0.35.0"
+  version "0.36.0"
   # Pinned, not :no_check. The download URL carries the version, so the file it
   # points at is immutable and its hash is knowable. :no_check would tell
   # Homebrew to install whatever bytes arrive at that URL.
@@ -17,7 +17,7 @@ cask "listen" do
   # nothing in a release implies either of them, so a generator would quietly
   # flatten both. Bumping by hand is the fallback when a run fails, and then
   # these are still the only two lines that change.
-  sha256 "d2b3c2611814a06b1d5698c0b60a5150a21633e42025e23b536a3d63bd082481"
+  sha256 "fb6a6c7c45d6742a25d1a937cbad8d5193054bbd4b69eba7bbd50bd2f23ea231"
 
   url "https://github.com/mugoosse/listen/releases/download/v#{version}/Listen-#{version}.dmg"
   name "Listen"
