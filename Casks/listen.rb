@@ -55,8 +55,17 @@ cask "listen" do
   # one thing in this file worth arguing about. It holds the recordings: one
   # folder per meeting, with the audio, the transcript and the voiceprints.
   # `--zap` is a flag people pass without reading it, and the cost either way
-  # is not symmetric. Leaving preferences behind costs nothing, because they
-  # regenerate. Deleting an hour of somebody's meetings deletes the only copy.
+  # is not symmetric. Deleting an hour of somebody's meetings deletes the only
+  # copy, so the library is not in the list below whatever Homebrew's
+  # convention says.
+  #
+  # **The preferences are in the list, and one thing in them no longer
+  # regenerates.** A Listen Pro licence is a signed string kept in
+  # `com.mgo.listen.plist`, so zapping takes it with everything else. It is
+  # recoverable, which is why it stays in the list: the licence lives in the
+  # buyer's email and pasting it back is the whole of the repair. A recording
+  # has no second copy anywhere, which is the difference this stanza is
+  # drawing.
   #
   # The consequence is that --zap does not remove everything, which is a
   # Homebrew convention this breaks on purpose. The caveats say where the
@@ -101,5 +110,17 @@ cask "listen" do
     symlink into the app and uninstalling leaves it dangling:
 
       rm -f /usr/local/bin/listen ~/.local/bin/listen
+
+    Recording, transcribing, telling the voices apart, dictation, your notes
+    and the command line are free and stay free. Listen Pro adds Ask, the
+    profiles it writes about people, the review, and syncing to your other
+    devices. This is the same build either way: a licence is a line of text
+    you paste into Settings, Pro, so there is nothing else to install and
+    nothing here phones home to check it.
+
+      brew uninstall --zap listen
+
+    removes that licence along with the rest of the preferences. Your email
+    has it, and pasting it back is the whole of the repair.
   EOS
 end
