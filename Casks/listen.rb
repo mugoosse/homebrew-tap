@@ -31,7 +31,7 @@ cask "listen" do
   # No "on your Mac" here, however well it reads: brew style rejects a
   # description naming the platform. The caveats carry what it costs.
   desc "Local meeting recorder, transcriber and speaker labeller"
-  homepage "https://github.com/mugoosse/listen"
+  homepage "https://listenbrain.app/"
 
   # Listen updates itself through Sparkle, and Homebrew has to be told, or the
   # two fight over who owns the version: Sparkle replaces the app in place,
