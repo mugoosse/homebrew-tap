@@ -19,7 +19,14 @@ cask "listen" do
   # these are still the only two lines that change.
   sha256 "a8dfe0f37ce1776ef3a8884c512ac94df6557de15788139101f5e3424bd6540d"
 
-  url "https://github.com/mugoosse/listen/releases/download/v#{version}/Listen-#{version}.dmg"
+  # R2, not the GitHub release, because the repository is going private and
+  # this URL is one of the things that would take with it. Same bytes: the
+  # release uploads to both and the hash below is checked against either.
+  #
+  # Still the versioned name rather than Listen.dmg at the root. The sha256
+  # above only means anything while the URL is immutable, and a name without a
+  # version in it is not.
+  url "https://dl.listenbrain.app/v#{version}/Listen-#{version}.dmg"
   name "Listen"
   # No "on your Mac" here, however well it reads: brew style rejects a
   # description naming the platform. The caveats carry what it costs.
