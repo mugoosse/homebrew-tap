@@ -26,12 +26,12 @@ cask "listen" do
   # Still the versioned name rather than Listen.dmg at the root. The sha256
   # above only means anything while the URL is immutable, and a name without a
   # version in it is not.
-  url "https://dl.listenbrain.app/v#{version}/Listen-#{version}.dmg"
+  url "https://dl.getlisten.ai/v#{version}/Listen-#{version}.dmg"
   name "Listen"
   # No "on your Mac" here, however well it reads: brew style rejects a
   # description naming the platform. The caveats carry what it costs.
   desc "Local meeting recorder, transcriber and speaker labeller"
-  homepage "https://listenbrain.app/"
+  homepage "https://getlisten.ai/"
 
   # Listen updates itself through Sparkle, and Homebrew has to be told, or the
   # two fight over who owns the version: Sparkle replaces the app in place,
