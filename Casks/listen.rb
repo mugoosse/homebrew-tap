@@ -1,5 +1,5 @@
 cask "listen" do
-  version "0.51.0"
+  version "0.51.2"
   # Pinned, not :no_check. The download URL carries the version, so the file it
   # points at is immutable and its hash is knowable. :no_check would tell
   # Homebrew to install whatever bytes arrive at that URL.
@@ -17,7 +17,7 @@ cask "listen" do
   # nothing in a release implies either of them, so a generator would quietly
   # flatten both. Bumping by hand is the fallback when a run fails, and then
   # these are still the only two lines that change.
-  sha256 "2a32536ae376d954d49d589cfe5eb05896a7988f644ab741a26e1dedd23862e9"
+  sha256 "0bd46d3740548c2e31684b1b82f9356ce6b1a109c0667e7e25d62e57223c588d"
 
   # R2, not the GitHub release, because the repository is going private and
   # this URL is one of the things that would take with it. Same bytes: the
